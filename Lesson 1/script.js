@@ -1,0 +1,10 @@
+// alert('Good morning!');
+// alert('Emmanuel Louise Gonzales');
+// alert(10 + 5);
+// alert(20 - 5);
+// alert(2 + 2 - 5);
+document.body.innerHTML = 'Good morning';
+document.body.innerHTML = 'Emmanuel Louise Gonzales';
+alert(10 + 8 + 20);
+alert(100 + 200 - (20 + 50) );
+document.body.innerHTML = '';
