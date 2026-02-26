@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Exercises Functions</title>
+        <script src ="script.js"></script>
+    </head>
+
+    <body>
+        <p>Hello World!</p>
+        <script>
+
+            // function greet(name = 'there') {
+            //     console.log(`Hello ${name}!`);
+            // }
+
+            // greet();
+            // greet('Simon');
+
+            // function greet(name) {
+
+            //     if (!name) {
+            //         console.log('Hello there!');
+            //     }
+            //     else {
+            //         console.log(`Hello ${name}!`);
+            //     }
+            // }
+
+            // greet();
+            // greet('Simon');
+
+            function convertToFahrenheight(celcius) {
+                let fahrenheit = 0;
+
+                celcius = (celcius * 9/5) +  32;
+                fahrenheit = celcius;
+                console.log(fahrenheit);
+
+                return fahrenheit;
+            }
+
+            convertToFahrenheight(32);
+            console.log(convertToFahrenheight(54));
+        </script>
+    </body>
+</html>
