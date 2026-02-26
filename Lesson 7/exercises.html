@@ -31,7 +31,7 @@
             // greet();
             // greet('Simon');
 
-            function convertToFahrenheight(celcius) {
+            function convertToFahrenheiht(celcius) {
                 let fahrenheit = 0;
 
                 celcius = (celcius * 9/5) +  32;
@@ -41,8 +41,26 @@
                 return fahrenheit;
             }
 
-            convertToFahrenheight(32);
-            console.log(convertToFahrenheight(54));
+            convertToFahrenheiht(32);
+
+            function convertToCelcius(fahrenheit) {
+                return ((fahrenheit - 32) * 5/9);
+            }
+
+            console.log(convertToCelcius(122));
+
+            function convertTemperature(degrees, unit) {
+                let fahrenheit = degrees;
+
+                if (unit === 'F') {
+                    return ((fahrenheit * 9/5) + 32);
+                }
+                else if (unit === 'C') {
+                    return ((fahrenheit - 32) * 5/9);
+                }
+            }
+
+            console.log(convertTemperature(30, 'C'));
         </script>
     </body>
 </html>
