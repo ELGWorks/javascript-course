@@ -41,26 +41,26 @@
                 return fahrenheit;
             }
 
-            convertToFahrenheiht(32);
+            // convertToFahrenheiht(32);
 
             function convertToCelcius(fahrenheit) {
                 return ((fahrenheit - 32) * 5/9);
             }
 
-            console.log(convertToCelcius(122));
+            // console.log(convertToCelcius(122));
 
             function convertTemperature(degrees, unit) {
-                let fahrenheit = degrees;
-
                 if (unit === 'F') {
-                    return ((fahrenheit * 9/5) + 32);
+                    const result = convertToFahrenheiht(degrees);
+                    return `${result}F`;
                 }
                 else if (unit === 'C') {
-                    return ((fahrenheit - 32) * 5/9);
+                    const result = convertToCelcius(degrees);
+                    return `${result}C`;
                 }
             }
 
-            console.log(convertTemperature(30, 'C'));
+            console.log(convertTemperature(30, 'F'));
         </script>
     </body>
 </html>
