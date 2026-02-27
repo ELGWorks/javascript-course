@@ -31,36 +31,50 @@
             // greet();
             // greet('Simon');
 
-            function convertToFahrenheiht(celcius) {
-                let fahrenheit = 0;
+            // function convertToFahrenheiht(celcius) {
+            //     let fahrenheit = 0;
 
-                celcius = (celcius * 9/5) +  32;
-                fahrenheit = celcius;
-                console.log(fahrenheit);
+            //     celcius = (celcius * 9/5) +  32;
+            //     fahrenheit = celcius;
+            //     console.log(fahrenheit);
 
-                return fahrenheit;
-            }
+            //     return fahrenheit;
+            // }
 
-            // convertToFahrenheiht(32);
+            // // convertToFahrenheiht(32);
 
-            function convertToCelcius(fahrenheit) {
-                return ((fahrenheit - 32) * 5/9);
-            }
+            // function convertToCelcius(fahrenheit) {
+            //     return ((fahrenheit - 32) * 5/9);
+            // }
 
-            // console.log(convertToCelcius(122));
+            // // console.log(convertToCelcius(122));
 
-            function convertTemperature(degrees, unit) {
-                if (unit === 'F') {
-                    const result = convertToFahrenheiht(degrees);
-                    return `${result}F`;
+            // function convertTemperature(degrees, unit) {
+            //     if (unit === 'F') {
+            //         const result = convertToFahrenheiht(degrees);
+            //         return `${result}F`;
+            //     }
+            //     else if (unit === 'C') {
+            //         const result = convertToCelcius(degrees);
+            //         return `${result}C`;
+            //     }
+            // }
+
+            // console.log(convertTemperature(40, 'F'));
+
+            function convertLength(length, from, to) {
+                if (from === 'km' && to === 'miles'){
+                    return result = length * 0.6213712;
                 }
-                else if (unit === 'C') {
-                    const result = convertToCelcius(degrees);
-                    return `${result}C`;
+                else if (from === 'miles' && to === 'km'){
+                    return result = length * 1.609344;
+                }
+                else {
+                    return length;
                 }
             }
 
-            console.log(convertTemperature(30, 'F'));
+            console.log(convertLength(60, 'km', 'miles'));
         </script>
     </body>
 </html>
