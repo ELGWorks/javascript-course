@@ -64,17 +64,31 @@
 
             function convertLength(length, from, to) {
                 if (from === 'km' && to === 'miles'){
-                    return result = length * 0.6213712;
+                    return result = `${length / 1.6} miles`;
+                }
+                else if (from === 'km' && to === 'feet'){
+                    return result = `${length * 3280} feet`;
                 }
                 else if (from === 'miles' && to === 'km'){
-                    return result = length * 1.609344;
+                    return result = `${length * 1.6} km`;
+                }
+                else if (from === 'miles' && to === 'feet'){
+                    return result = `${length * 5280} feet`;
+                }
+                else if (from === 'feet' && to === 'miles'){
+                    return result = `${length / 5280} miles`;
+                }
+                else if (from === 'feet' && to === 'km'){
+                    return result = `${length / 3280} km`;
                 }
                 else {
-                    return length;
+                    return `${length} ${from}`;
                 }
             }
 
-            console.log(convertLength(60, 'km', 'miles'));
+            console.log(convertLength(80, 'miles', 'feet'));
+
+
         </script>
     </body>
 </html>
