@@ -11,8 +11,16 @@
         let cartQuantity = 0;
 
         function updateCartQuantity(value) {
-        cartQuantity += value;
-        console.log(cartQuantity);
+            if (cartQuantity + value > 10) {
+                alert('Cart is full')
+            }
+            else if (cartQuantity + value < 0) {
+                alert('Not enough items in the cart');
+            }
+            else {
+                cartQuantity += value;
+                console.log(cartQuantity);
+            }
         }
     </script>
 
