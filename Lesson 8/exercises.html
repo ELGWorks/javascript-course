@@ -19,7 +19,7 @@
 
         let football = {
             name: 'football',
-            price: 3500
+            price: 2095
         }
 
         // console.log(basketball);
@@ -41,6 +41,21 @@
             }
         }
 
+        function isSameProduct(product1, product2) {
+            if (product1.price === product2.price) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
         console.log(comparePrice(basketball, football));
+        console.log(isSameProduct(basketball, football));
+
+        let name = 'EMMANUEL';
+
+        console.log(name.toLowerCase());
+        console.log(name.toLowerCase().repeat(2));
     </script>
 </html>
