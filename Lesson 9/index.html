@@ -3,11 +3,40 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>JS Practice</title>
+        <title>JS DOMs Practice</title>
         <script src ="script.js"></script>
     </head>
 
     <body>
-        <p>Hello World!</p>
+        <button>Hello</button>
+        <button class="js-button">Hello2</button>
+        <script>
+
+            console.log(document.querySelector('button').innerHTML);
+
+            document.querySelector('button').innerHTML = 'Hi';
+
+            document.querySelector('.js-button').innerHTML = 'Hi';
+
+            const buttonElement = document.querySelector('.js-button');
+            console.log(buttonElement);
+            
+            // console.log(document.title);
+            // document.title = 'Changed';
+
+            // console.log(document.body);
+            // console.log(typeof document.body);
+
+            // console.log(document.body.innerHTML);
+
+            // document.body.innerHTML = '<button>Good job!<button>';
+
+            
+
+            // document.body.innerHTML = 'hello';
+            // document.title = 'Good job!';
+            
+
+        </script>
     </body>
 </html>
