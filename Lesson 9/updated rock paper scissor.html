@@ -16,9 +16,9 @@
 
         <button onclick="playGame('scissor')" class="btn-subscribe">Scissors</button>
 
-        <p class="text-result">You lose.</p>
+        <p class="text-result"></p>
 
-        <p>You <span class="playerPick">rock</span> - <span class="computerPick">paper</span> Computer</p>
+        <p><span class="playerPick"></span><span class="computerPick"></span></p>
 
         <p>Wins: <span class="text-wins">0</span>, Losses: <span class="text-losses">0</span>, Ties: <span class="text-ties">0</span></p>
         <!-- <p>Wins: 6,</p>
@@ -94,8 +94,8 @@
                     resultElement.innerText = "It's a tie."
                 }
 
-                playerElement.innerText = playerMove;
-                computerElement.innerText = computerMove;
+                playerElement.innerText = `You ${playerMove} - `;
+                computerElement.innerText = `${computerMove} Computer`;
 
                 winsElement.innerText = score.wins;
                 lossesElement.innerText = score.losses;
@@ -132,6 +132,10 @@
                 winsElement.innerText = 0;
                 lossesElement.innerText = 0;
                 tiesElement.innerText = 0;
+
+                resultElement.innerText = '';
+                playerElement.innerText = ``;
+                computerElement.innerText = ``;
             }
 
             winsElement.innerText = score.wins;
