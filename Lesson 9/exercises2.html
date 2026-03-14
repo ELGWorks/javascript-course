@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Amazon</title>
+        <script src ="script.js"></script>
+    </head>
+
+    <body>
+
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = FREE shipping.</p>
+        <input placeholder="Cost of order" class="js-input"  onkeydown="handleCostKeydown(event);">
+        <button onclick="calculateCost();">Calculate</button>
+        <p class="totalCost"></p>
+
+        <input onkeyup="lowerCase()" class="input-field">
+        <p class="onkeyup-output">1</p>
+
+        <script>
+
+            function handleCostKeydown(event) {
+                if (event.key === 'Enter') {
+                calculateCost();
+                }
+            }
+
+            function calculateCost() {
+                const inputElement = document.querySelector('.js-input');
+                let cost = Number(inputElement.value) * 100;
+
+                if (cost < 4000) {
+                    cost = cost + 1000;
+                }
+
+                document.querySelector('.totalCost').innerHTML = `$${cost / 100}`;
+            }
+
+            function lowerCase() {
+                let input = document.querySelector('.input-field')
+                let output = document.querySelector('.onkeyup-output')
+
+                output.innerHTML = input.value;
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    font-family: arial;
+}
+
+.btn-subscribe {
+    padding: 9px 15px 9px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    border: none;
+    font-weight: bold;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.15s;
+    margin-bottom: 30px;
+}
+
+.is-subscribed {
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+.cost-input {
+    font-size: 15px;
+    padding: 7px 10px 7px 10px;
+}

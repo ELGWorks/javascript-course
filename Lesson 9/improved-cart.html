@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Improved Cart</title>
+        <script src ="script.js"></script>
+    </head>
+
+
+
+    <body>
+        <p>Cart Quantity</p>
+
+        <button onclick="
+        console.log(`Cart quantity: ${cartQuantity}`);
+        ">Show Quantity</button>
+
+        <button onclick="
+        updateCartQuantity(-2);
+        ">-2</button>
+
+        <button onclick="
+        updateCartQuantity(-1);
+        ">-1</button>
+
+        <button onclick="
+        updateCartQuantity(1);
+        ">Add to Cart</button>
+
+        <button onclick="
+        updateCartQuantity(2);
+        ">+2</button>
+
+        <button onclick="
+        updateCartQuantity(3);
+        ">+3</button>
+
+        <button onclick="
+        updateCartQuantity(4);
+        ">+4</button>
+
+        <button onclick="
+        updateCartQuantity(5);
+        ">+5</button>
+
+        <button onclick="
+        updateCartQuantity(-1);
+        ">Remove from cart</button>
+
+        <button onclick="resetCart();">Reset Cart</button>
+
+        <p class="display-cart-quantity"></p>
+
+        <script>
+
+            let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+            let cartElement = document.querySelector('.display-cart-quantity');
+
+            function updateCartQuantity(value) {
+                if (cartQuantity + value > 10) {
+                    alert('Cart is full')
+                }
+                else if (cartQuantity + value < 0) {
+                    alert('Not enough items in the cart');
+                }
+                else {
+                    cartQuantity += value;
+                    cartElement.innerHTML = `Cart quantity: ${cartQuantity}`; 
+                }
+
+                localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+
+            }
+
+            function resetCart() {
+                cartQuantity = 0;
+
+                localStorage.clear('cartQuantity');
+                console.log(`Cart was reset`);
+                console.log(`Cart quantity: ${cartQuantity}`);
+
+                cartElement.innerHTML = `Cart quantity: ${cartQuantity}`;
+            }
+
+            cartElement.innerHTML = `Cart quantity: ${cartQuantity}`;
+
+        </script>
+
+    </body>
+</html>
